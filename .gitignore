@@ -1,1 +1,15 @@
+# secrets
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# local database and uploads
+db.sqlite3
+media/
+
+# virtual environments / editors
+venv/
+.venv/
+.vscode/

@@ -13,7 +13,7 @@ class User(AbstractUser):
     user_type=models.CharField(max_length=10,choices=USER_TYPE_CHOICES)
     profile_image=models.ImageField(upload_to='profiles/',null=True,blank=True)
     bio = models.TextField(max_length=500,blank=True,null=True)
-     #methods they can access
+    #methods they can access
     def __str__(self):
         return f"{self.username} - {self.email}"
     
@@ -22,3 +22,4 @@ class User(AbstractUser):
     
     def is_student(self):
         return self.user_type=='student'
+

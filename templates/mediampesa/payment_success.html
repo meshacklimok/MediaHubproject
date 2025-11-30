@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Payment Successful - MediaHub{% endblock %}
+{% block content %}
+<div class="container py-5 text-center">
+  <i class="fas fa-check-circle text-success mb-3" style="font-size: 4rem;"></i>
+  <h2>Payment was successful!</h2>
+  <p class="text-muted">Thank you for supporting the creator. A receipt has been sent to your email.</p>
+  <a href="{% url 'media_assets:dashboard' %}" class="btn btn-primary">Back to Dashboard</a>
+</div>
+{% endblock %}

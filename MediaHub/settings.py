@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-g7%b=2em_*-yt9640amzkoyn@w$89$-5-)8gv&ovq8&jv^e^^3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".ngrok-free.app",  # ngrok tunnel used to receive M-Pesa callbacks
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.ngrok-free.app",
+]
 
 
 # Application definition
@@ -40,6 +47,7 @@ INSTALLED_APPS = [
     'accounts',
     'media_assets',
     'cloudinary',
+    'mediampesa',
 ]
 
 #register our custom user model
