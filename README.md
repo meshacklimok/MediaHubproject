@@ -26,10 +26,56 @@ media sharing platform that has role based access
      - register a custom authentication process 
      - emails registry 
 
-### Authentication and Authorization 
+### Authentication and Authorization  (accounts app)
 Authentication = identity identification, who are you ? 
 Authorization = access priviledges - role based authorization , token based authorization 
 
 1. Create our custom user model - models.py
 2. Extend the integrated form captures - forms.py
-3. Create the views action for registration and login - views.py
+3. Create the views action for registration and login , logout and profile view , 
+custompasswordresetview , custompasswordresetconfirmview - views.py
+4. Register the views actions as URL route - urls.py 
+5. Register the models for admin to use and manage content on - admin.py
+6. Register the apps url to the projects urls = project/urls.py
+7. Create the templates 
+   - create a templates folder - within the app 
+   - create a global templates folder - register it's configuration in the settings.py file 
+8. Make databases migrations and then populate the templates 
+   python manage.py makemigrations 
+   python manage.py migrate
+
+### Template creation
+1. Configuration level file : base.html 
+   - Defining your blocks : title , extra_css , content (most important) , footer, extra_js
+   - Linking to global stylesheet / style lib. (bootstrap)
+   - Link to global js files 
+
+2. Create the other pages by simplying extending (extends) the configs done on 1.
+   Populate what is dynamic using block.  
+
+## MVT - Model Views Templates
+
+### Media Asset app views 
+'''
+1. Dashboard view : this allows my user to see uploaded items set as public 
+2. My media view : this allows users to see only their uploads 
+3. Upload media view : this allows user to upload media 
+4. Edit media view : this allows user to edit uploaded media 
+5. Delete media view : this allows user to delete their uploaded media 
+6. Media Detail view : this allows users to see all details for a media item 
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
